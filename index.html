@@ -28,7 +28,7 @@ import{getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmail
 import{getFirestore,collection,doc,getDocs,setDoc,deleteDoc}from"https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 const $=id=>document.getElementById(id),uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7),esc=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 let auth,store,user=null,items={templates:[],projects:[]},current=null,kind="templates";
-const configured=firebaseConfig.apiKey!=="GANTI_API_KEY"&&firebaseConfig.projectId!=="GANTI_PROJECT_ID";
+const configured=firebaseConfig.apiKey!=="AIzaSyABzArOPbCaH0VdRKvcRuG8mApEEZQpWGk"&&firebaseConfig.projectId!=="leubh-studio";
 function say(t,id="msg"){$(id).textContent=t}
 function base(name="Our Little Story"){return{name,heading:"A little story about us",subtitle:"Every moment with you is my favorite.",names:"You & Me",story:"A collection of little moments, memories, and everything that makes our story special.",color:"#b87991"}}
 function ref(type,id){return doc(store,"users",user.uid,type,id)}
